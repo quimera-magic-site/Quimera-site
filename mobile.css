@@ -155,3 +155,35 @@
   .mobile-action-bar .mobile-action-whatsapp>.wa-cta-inner{font-size:11px;gap:6px}
   .hero-buttons .whatsapp-cta>.wa-cta-inner{font-size:12px}
 }
+
+/* Mobile hero: photo first, then centered copy and comfortable contact buttons. */
+@media(max-width:760px){
+  .hero-layout{padding-top:18px;padding-bottom:35px;gap:28px}
+  .hero-art{order:-1;width:100%;max-width:360px;height:auto;aspect-ratio:4/5;margin:0 auto}
+  .hero-art .hero-main-image{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:26px;transform:none;box-shadow:0 12px 30px #7d469d20}
+  .hero-art:hover .hero-main-image{transform:none}
+  .hero-art-backdrop,.hero-art .hero-floating-card{display:none}
+  .hero-art .art-disclaimer{bottom:9px;font-size:7px;left:8px;right:8px;max-width:none}
+  .hero-content{text-align:center;min-width:0}
+  .hero-content .micro-label{justify-content:center;font-size:8px;letter-spacing:1.2px}
+  .hero h1{margin:16px auto;max-width:570px}
+  .hero-lead{margin:0 auto 22px;max-width:480px}
+  .hero-buttons{align-items:center;max-width:360px;margin-inline:auto;gap:12px}
+  .hero-buttons>.button{justify-content:center;gap:12px;min-height:52px}
+  .hero-social{flex-direction:column;max-width:none;gap:10px}
+  .hero-buttons .hero-social .button{flex:none;width:100%;min-height:52px;padding:14px 18px;justify-content:center;font-size:13px;gap:10px}
+  .hero-buttons .hero-social .whatsapp-cta>.wa-cta-inner{font-size:13px;gap:9px}
+  .hero-buttons .hero-social .wa-cta-label{font-size:inherit}
+  .hero-buttons .hero-social .whatsapp-cta{order:0}
+  .hero-bottom-copy{justify-content:center;max-width:360px;margin:22px auto 0;text-align:left}
+  .catalog-assist,.load-more-wrap{text-align:center}
+  .catalog-assist .button,.load-more-wrap .button{justify-content:center;white-space:normal}
+  .contact-direct,.form-submit{white-space:normal;text-align:center}
+  .contact-direct .wa-cta-inner{flex-wrap:wrap}
+}
+@media(max-width:375px){
+  .hero-layout{gap:25px}
+  .hero-art{max-width:320px}
+  .hero-content .micro-label{letter-spacing:.8px;font-size:7.5px}
+  .hero h1{font-size:clamp(35px,10.6vw,40px)}
+}
