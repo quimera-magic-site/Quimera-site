@@ -1,0 +1,157 @@
+/* Quimera Magic — mobile experience layer (preserves approved desktop identity).
+   Tested at 320, 360, 375, 390, 430, 768 px plus desktop.
+   Design goals: readable typography, thumb-friendly controls, safe-area spacing,
+   uncluttered above-the-fold hero and resilient overlays. */
+.card-photo-open{display:block;position:relative;width:100%;border:0;background:transparent;padding:0;text-align:inherit;cursor:pointer}
+.card-photo-open .character-art{width:100%}
+.card-photo-open:focus-visible{outline:3px solid #8551a8;outline-offset:-3px;z-index:2}
+.mobile-action-bar{display:none}
+@media(max-width:760px){
+  html{scroll-padding-top:86px}
+  .header{background:#fcf8f5;isolation:isolate}
+  .header-inner{height:69px}
+  .menu-toggle{display:flex;min-height:48px;min-width:48px;border-radius:12px;gap:6px}
+  .menu-toggle span{width:23px}
+  .menu-toggle:focus-visible{outline:3px solid #9666b4;outline-offset:2px}
+  .mobile-menu{top:100%;background:#fffaf8;padding:8px max(20px,5% ) 22px;max-height:calc(100dvh - 110px);overflow-y:auto;box-shadow:0 22px 40px #25153238;border-top:1px solid #ecdeea}
+  .mobile-menu a{min-height:52px;display:flex;align-items:center;line-height:1.35;padding:12px 10px;font-size:15px}
+  .mobile-menu a:last-child{margin-top:10px;justify-content:center;border-radius:13px;background:#40274f;color:white}
+  .hero-layout{grid-template-columns:minmax(0,1fr);min-height:0;gap:0;padding-top:27px;padding-bottom:23px}
+  .hero-content{padding:0}
+  .micro-label{font-size:9px;letter-spacing:1.5px;gap:7px}
+  .hero h1{font-size:clamp(41px,9.2vw,56px);line-height:1.07;letter-spacing:-1.6px;margin:17px 0 13px;max-width:100%;text-wrap:balance}
+  .title-asterisk{font-size:.35em;margin-left:8px}
+  .hero-lead{font-size:14px;line-height:1.65;margin-bottom:18px;max-width:490px}
+  .hero-buttons{display:flex;flex-direction:column;gap:9px}
+  .hero-buttons .button{width:100%;min-height:49px;padding:12px 18px;border-radius:17px;font-size:12px;justify-content:space-between}
+  .hero-buttons .button-light{order:-1}
+  .hero-bottom-copy{margin-top:17px;gap:12px;font-size:11px;line-height:1.5}
+  .hero-icon-mark{flex-shrink:0}
+  .hero-art{height:365px;width:100%;max-width:440px;margin:6px auto 0}
+  .hero-main-image{width:89%;height:96%;object-position:50% 46%}
+  .floating-one{left:1%;bottom:18%;padding:13px;width:133px}
+  .floating-one strong{font-size:13px}
+  .floating-two{right:0;top:7%;font-size:8px}
+  .art-disclaimer{font-size:7px;bottom:5px;max-width:94%;text-align:center}
+  .hero-bottom-line{display:none}
+  .section{padding:65px 0}
+  .section h2,.planner-section h2,.story-section h2,.contact-section h2{font-size:clamp(35px,8vw,46px);line-height:1.14;letter-spacing:-1.2px;text-wrap:balance}
+  .intro-grid>p,.section-top>p,.story-left>p,.planner-intro>p{line-height:1.75;font-size:14px}
+  .experience-grid{grid-template-columns:1fr;gap:12px}
+  .experience-card{height:245px;border-radius:20px}
+  .experience-info strong{font-size:29px}
+  .catalog-heading{display:block}
+  .catalog-heading h2{font-size:clamp(34px,8vw,44px)}
+  .catalog-figure{display:flex;flex-direction:row;align-items:center;gap:12px;margin:16px 0 0}
+  .catalog-figure strong{font-size:44px}
+  .catalog-figure span{font-size:9px;letter-spacing:.7px}
+  .catalog-toolbar{display:flex;flex-direction:column-reverse;align-items:stretch;gap:6px}
+  .search-field{min-width:0;max-width:none;width:100%;height:49px;min-height:49px;padding:0 13px;border-radius:14px;border-color:#dbcada}
+  .search-field input{height:47px;font-size:16px;line-height:1.25}
+  .search-field button{min-width:42px;min-height:42px;display:grid;place-items:center;font-size:26px}
+  .catalog-filters{width:100%;display:flex;align-items:center;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;gap:8px;scrollbar-width:none;padding:5px 0 10px}
+  .catalog-filters::-webkit-scrollbar{display:none}
+  .filter-chip{scroll-snap-align:start;min-height:44px;padding:10px 16px;font-size:12px}
+  .catalog-result-line{margin:9px 0 15px;font-size:11px}
+  .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .character-card{border-radius:17px}
+  .character-art{height:clamp(164px,45vw,215px)}
+  .card-save{width:44px;height:44px;top:7px;right:7px;font-size:23px;z-index:4}
+  .card-body{min-height:157px;padding:14px 12px;gap:8px}
+  .card-category{font-size:9px;letter-spacing:.5px;line-height:1.4}
+  .card-body h3{font-size:clamp(18px,4.7vw,22px);line-height:1.18;overflow-wrap:anywhere}
+  .card-open{width:100%;min-height:45px;padding:10px 9px;font-size:11px;line-height:1.2}
+  .catalog-assist .button{min-height:46px}
+  .load-more-wrap .button{min-height:48px}
+  .gallery-grid{gap:9px}
+  .gallery-tile{min-height:140px}
+  .choice{min-height:60px;line-height:1.4}
+  .choice-grid-small .choice{min-height:48px}
+  .planner-suggestion{min-height:44px}
+  .faq-items summary{min-height:60px;line-height:1.55;gap:15px}
+  .contact-form-card label{font-size:13px;line-height:1.45}
+  .contact-form-card input,.contact-form-card select,.contact-form-card textarea{font-size:16px;min-height:49px;line-height:1.4;border-radius:12px}
+  .contact-form-card textarea{min-height:115px}
+  .contact-form-card .form-submit{min-height:52px}
+  .footer{padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+  .floating-whatsapp{display:none!important}
+  .mobile-action-bar{position:fixed;bottom:0;left:0;right:0;z-index:55;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:9px;background:#fcf8f5f5;border-top:1px solid #e8dce9;padding:10px max(12px,4vw) calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -8px 24px #28133516;backdrop-filter:blur(14px)}
+  .mobile-action-bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:49px;padding:8px;border-radius:14px;font-size:12px;font-weight:800;line-height:1.25;text-align:center}
+  .mobile-action-bar a span{font-size:19px;line-height:1}
+  .mobile-action-catalog{background:#f2e9f5;color:#4b2e5d}
+  .mobile-action-whatsapp{background:#2b9259;color:white}
+  body.has-selection .mobile-action-bar,body.modal-open .mobile-action-bar,body.menu-open .mobile-action-bar,body:has(.contact-form-card :focus) .mobile-action-bar{display:none}
+  .selection-tray{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.65fr) 42px;gap:8px;align-items:center;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));width:auto;padding:11px 12px;transform:none;border-radius:18px;box-shadow:0 10px 38px #22102f5e}
+  .selection-tray .tray-icon{display:none}
+  .selection-tray>div{grid-column:1/3;grid-row:1;flex-basis:auto}
+  .selection-tray strong{font-size:12px}
+  .selection-tray .tray-clear{grid-column:3;grid-row:1;min-width:42px;min-height:42px;display:grid;place-items:center;font-size:25px}
+  .selection-tray .tray-view{grid-column:1;grid-row:2}
+  .selection-tray .tray-send{grid-column:2/4;grid-row:2}
+  .selection-tray button{min-height:45px;padding:9px;font-size:11px;line-height:1.3;white-space:normal}
+  .modal{padding:10px;align-items:center}
+  .modal-dialog{display:block;max-height:calc(100dvh - 20px);overflow-y:auto;overscroll-behavior:contain;border-radius:18px}
+  .modal-visual{height:235px;min-height:235px}
+  .modal-body{padding:24px 23px}
+  .modal-body h2{font-size:clamp(30px,8vw,42px);line-height:1.15}
+  .modal-actions{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+  .modal-actions .button{min-height:48px;width:100%}
+  .modal-close{width:46px;height:46px;right:9px;top:9px}
+  .selection-dialog{max-height:calc(100dvh - 20px);overflow-y:auto;overscroll-behavior:contain;padding:26px 21px}
+  .selection-dialog .button{min-height:49px}
+  .selected-item button{min-width:44px;min-height:44px}
+}
+@media(max-width:375px){
+  .hero h1{font-size:clamp(39px,11vw,43px);letter-spacing:-1.3px}
+  .hero-art{height:315px}
+  .hero-main-image{width:91%;height:95%}
+  .floating-one{bottom:14%;width:116px}
+  .floating-two{font-size:7px}
+  .catalog-grid{grid-template-columns:1fr;gap:11px}
+  .character-card{display:grid;grid-template-columns:125px minmax(0,1fr);min-height:164px;align-items:stretch}
+  .card-photo-open{grid-column:1;grid-row:1;min-height:164px}
+  .card-photo-open .character-art{height:100%;min-height:164px}
+  .card-body{grid-column:2;grid-row:1;min-width:0;min-height:164px;padding:13px 11px;gap:6px}
+  .card-body h3{font-size:19px}
+  .card-save{right:auto;left:6px;top:6px;width:44px;height:44px}
+  .art-label{font-size:7px;left:5px;bottom:6px;letter-spacing:0;padding:5px}
+  .character-art--missing .art-icon{font-size:64px}
+  .card-open{font-size:10px;padding:9px 7px;min-height:44px}
+  .mobile-action-bar a{font-size:11px}
+}
+@media(hover:none) and (max-width:760px){
+  .character-card:hover{transform:none;box-shadow:0 4px 15px #37193c09}
+  .character-card:hover .character-art img{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .mobile-action-bar,.character-card,.card-photo-open *{animation:none!important;transition:none!important}
+}
+
+/* WhatsApp CTAs — intentional visual centering across touch and desktop.
+   Group icon + label as one centered flex item: never distribute them at opposite edges. */
+.wa-cta-inner{display:inline-flex;align-items:center;justify-content:center;gap:9px;max-width:100%;min-width:0;line-height:1.25;vertical-align:middle;text-align:center}
+.wa-cta-inner .wa-cta-icon{display:block;width:19px;height:19px;flex:0 0 19px}
+.wa-cta-inner .wa-cta-label{display:block;min-width:0;font-size:inherit;font-weight:inherit;line-height:1.25}
+.wa-cta-inner .wa-arrow{display:block;font-size:15px;line-height:1;flex:none}
+.hero-buttons .whatsapp-cta{justify-content:center;text-align:center;gap:0}
+.hero-buttons .whatsapp-cta>.wa-cta-inner{font-size:12px}
+.hero-buttons .whatsapp-cta .wa-cta-icon{color:#249a58}
+.floating-whatsapp{justify-content:center;text-align:center}
+.floating-whatsapp .wa-cta-inner{gap:9px}
+.floating-whatsapp .wa-cta-icon{width:17px;height:17px;flex-basis:17px}
+.contact-direct{justify-content:center}
+.contact-direct .wa-cta-inner{font-size:12px;gap:10px}
+.contact-direct .wa-cta-icon{width:19px;height:19px;flex-basis:19px}
+@media(max-width:760px){
+  .hero-buttons .whatsapp-cta{display:flex;justify-content:center;align-items:center;text-align:center;padding-inline:14px;gap:0}
+  .hero-buttons .whatsapp-cta>.wa-cta-inner{font-size:13px;gap:10px}
+  .mobile-action-bar .mobile-action-whatsapp{display:flex;align-items:center;justify-content:center;padding-inline:8px}
+  .mobile-action-bar .mobile-action-whatsapp>.wa-cta-inner{display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1.25;gap:8px}
+  .mobile-action-bar .mobile-action-whatsapp .wa-cta-icon{width:18px;height:18px;flex-basis:18px}
+  .mobile-action-bar .mobile-action-whatsapp .wa-cta-label{font-size:inherit;line-height:1.25}
+  .contact-direct .wa-cta-inner{font-size:13px}
+}
+@media(max-width:375px){
+  .mobile-action-bar .mobile-action-whatsapp>.wa-cta-inner{font-size:11px;gap:6px}
+  .hero-buttons .whatsapp-cta>.wa-cta-inner{font-size:12px}
+}

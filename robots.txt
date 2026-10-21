@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quimerasite.vercel.app/sitemap.xml
