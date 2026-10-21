@@ -29,7 +29,7 @@ As fotografias `assets/*.webp` foram fornecidas no projeto. Necessário validar 
 
 SEO foi habilitado em 2026-10-09 com sitemap.xml, canônicas, novas páginas de serviço e robots.txt permitindo rastreamento. Ver SEO-CONFIGURACAO.md para verificação de propriedade e pendências.
 
-O Instagram reserva é usado para contato social porque havia indícios de conflito de propriedade da conta principal; confirmar com a empresa os dados oficiais antes de publicar definitivamente.
+O Instagram é usado para contato social porque havia indícios de conflito de propriedade da conta principal; confirmar com a empresa os dados oficiais antes de publicar definitivamente.
 
 ## Validação
 
